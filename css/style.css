@@ -1,0 +1,191 @@
+/** Fuentes **/
+.logo, .title-font {
+    font-family: 'Lobster', cursive !important;
+}
+
+/** Estrellas **/
+.stars {
+    margin-bottom: .5em;
+}
+
+.stars i {
+    color: slateblue;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+
+/** Primary **/
+.bg-primary,
+.btn-primary {
+    background-color: slateblue !important;
+}
+
+.btn-primary {
+    border-color: slateblue !important;
+}
+.btn-primary:hover {
+    background-color: darkslateblue !important;
+    border-color: darkslateblue !important;
+}
+
+/** Secondary **/
+.bg-secondary {
+    background-color: #222 !important;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+/** Tabla de productos **/
+.carrito .table-bordered thead th {
+    border-bottom-width: 1px !important;
+}
+
+.carrito .table-bordered thead th {
+    background-color: #333;
+    color: white;
+    border-color: #444;
+    text-align: center;
+}
+
+/** Sombras **/
+.text-shadow {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .16);
+}
+
+/** Logo **/
+.logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: slateblue;
+    transition: color .3s;
+}
+.logo:hover {
+    text-decoration: none;
+    color: darkslateblue;
+}
+/** Desaparecer y Aparecer carrito **/
+.btn-cart {
+    transition: background-color .2s, border-color .2s !important;
+    position: relative;
+}
+.btn-cart.active {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+.btn-cart::after {
+    content: "";
+    clip-path: polygon(0 0, 100% 0, 50% 0);
+    transition: clip-path .1s;
+}
+
+.btn-cart.active::after {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background: inherit;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.btn-cart:focus {
+    box-shadow: none !important;
+}
+
+.header {
+    position: relative;
+}
+
+.carrito {
+    z-index: 100;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 500px;
+}
+.carrito.show {
+    display: block;
+}
+
+/** Banner **/
+.banner {
+    height: 650px;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.bg-cafe {
+    background: url(../img/cafe.jpg), linear-gradient(slateblue, white);
+    background-blend-mode: multiply;
+}
+.contenido-banner h2 {
+    font-size: 3rem;
+}
+.contenido-banner p {
+    font-size: 2rem;
+}
+
+/** Form-inline **/
+.form-inline input[type="text"] {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+.form-inline button[type="submit"] {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/** Separador **/
+.separador {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+.separador::first-letter {
+    color: slateblue;
+}
+.separador::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: .06em;
+    background-color: slateblue;
+    margin: 0 auto;
+    margin-top: 0.5em;
+}
+
+/** cards productos **/
+.autor-producto {
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: slateblue;
+}
+
+/** Precio **/
+.precio {
+    margin-top: 2rem;
+    margin-bottom: 2rem !important;
+    position: relative;
+    text-decoration: line-through;
+}
+.rebaja {
+    font-size: 2.3em;
+    position: absolute;
+    top: -15px;
+    left: 40px;
+    font-weight: bold;
+}
+
+/** Footer **/
+.copyright,
+.correo {
+    font-size: 1.2em;
+}

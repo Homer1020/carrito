@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda Homer</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Cutom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header" class="header py-3 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <a href="#" class="logo text-shadow">Tienda de Homer</a>
+                </div>
+                <div class="col-md-8 d-flex justify-content-end">
+                    <ul class="m-0 list-unstyled">
+                        <li class="submenu">
+                            <button class="btn btn-primary btn-cart" id="btn-cart">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <div id="carrito" class="carrito card card-body mt-3 shadow-sm">
+                                <table id="lista-carrito" class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Eliminar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+
+                                <a href="#" id="vaciar-carrito" class="btn btn-danger"><i class="fa fa-trash-alt mr-2"></i>Vaciar Carrito</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </header>
+
+    <div class="banner bg-cafe">
+        <div class="container h-100">
+            <div class="row h-100 justify-content-start align-items-center">
+                <div class="col-md-12">
+                    <div class="contenido-banner">
+                        <h2 class="mb-4 font-weight-normal title-font text-light text-shadow">Compra todo lo que Necesites</h2>
+                        <p class="mb-4 title-font text-light text-shadow">Al mejor precio en dolares</p>
+                        <form action="#" id="busqueda" method="post" class="formulario form-inline justify-content-start">
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="¿Que te gustaría Comprar?" id="buscador" style="width: 300px;">
+                            
+                                <button type="submit" id="submit-buscador" class="submit-buscador btn btn-primary">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div id="lista-cursos" class="container">
+        <h1 id="encabezado" class="encabezado text-center display-4 font-weight-normal title-font separador">Productos Destacados</h1>
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/camisa-tommy-hilfiger.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Camiseta Tommy Hilfiger</h4>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="precio">$50  <span class="rebaja">$15</span></p>
+                        <a href="#" class="btn btn-success agregar-carrito" data-id="1">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/gorra-tommy-hilfiger.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Gorra Tommy Hilfiger</h4>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="precio">$50  <span class="rebaja">$15</span></p>
+                        <a href="#" class="btn btn-success agregar-carrito" data-id="2">Agregar Al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/mujer-nike.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Calzado para mujer Nike Air Force 1 '07</h4>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="precio">$50  <span class="rebaja">$15</span></p>
+                        <a href="#" class="btn btn-success agregar-carrito" data-id="3">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/nike-camisa.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Camisa Nike SB</h4>
+                        <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                        </div>
+                        <p class="precio">$50  <span class="rebaja">$15</span></p>
+                        <a href="#" class="btn btn-success agregar-carrito" data-id="4">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/nike.derpotiva.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Camisa Nike Deportiva</h4>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="precio">$50  <span class="rebaja">$15</span></p>
+                        <a href="#" class="btn btn-success agregar-carrito" data-id="5">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/jordan.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Jordan Mars 270 Zapatillas - Hombre</h4>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="precio">$50  <span class="rebaja">$15</span></p>
+                        <a href="#" class="btn btn-success agregar-carrito" data-id="6">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/aerospace.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Calzado para hombre Jordan Aerospace 720</h4>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="precio">$50  <span class="rebaja">$15</span></p>
+                        <a href="#" class="btn btn-success agregar-carrito" data-id="7">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/tomy-zapatos.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Tommy Hilfiger sneakers</h4>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="precio">$50  <span class="rebaja">$15</span></p>
+                        <a href="#" class="btn btn-success agregar-carrito" data-id="8">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/nike270.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Compra Nike Air Max 270</h4>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="precio">$50  <span class="rebaja">$15</span></p>
+                        <a href="#" class="btn btn-success agregar-carrito" data-id="9">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/mono-nike.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Mono Nike AIR</h4>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="precio">$50  <span class="rebaja">$15</span></p>
+                        <a href="#" class="btn btn-success agregar-carrito" data-id="10">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/nike-jordan.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Camisa Nike Jordan AIR</h4>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="precio">$50  <span class="rebaja">$15</span></p>
+                        <a href="#" class="btn btn-success agregar-carrito" data-id="11">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/nike-jordan-retro6.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Jordan Nike Retro 6</h4>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="precio">$50  <span class="rebaja">$15</span></p>
+                        <a href="#" class="btn btn-success agregar-carrito" data-id="12">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+    </div>
+
+    <div id="message"></div>
+
+    <footer id="footer" class="footer py-4 mt-5 bg-primary text-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright m-0 text-shadow">Homer Moncayo &copy;</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="correo m-0 text-right text-shadow">homermoncallo@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
